@@ -4,7 +4,7 @@
 
 > Portfólio pessoal de Luis Eduardo, Desenvolvedor Full-Stack, criado para apresentar minhas habilidades, projetos e trajetória profissional. Este projeto foi construído do zero com React e estilizado com CSS puro, focando em um design moderno, interativo e totalmente responsivo.
 
-### ✨ [Acesse a versão ao vivo aqui!]([LINK-DO-SEU-SITE-PUBLICADO-AQUI])
+### ✨ Acesse a versão ao vivo aqui! portifolio-kohl-nine-91.vercel.app
 
 ---
 

@@ -1,0 +1,101 @@
+.sobre {
+    padding: 120px 5%;
+}
+
+.sobre-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.sobre-texto h2 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+.sobre-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.sobre-habilidades h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    color: var(--cor-texto-secundario);
+    margin-top: 1.3rem;
+}
+
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+}
+
+.habilidade-card {
+    background: var(--cor-surface);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.habilidade-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.habilidade-icone {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: var(--cor-texto-claro);
+    transition: color 0.3s ease;
+}
+
+.habilidade-card:hover .habilidade-icone {
+    color: var(--cor-glow-2);
+}
+
+.habilidade-card p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--cor-texto-secundario);
+    word-break: break-word;
+}
+
+.sobre .sobre-texto,
+.sobre .sobre-habilidades {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.sobre.visible .sobre-texto,
+.sobre.visible .sobre-habilidades {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 992px) {
+    .sobre-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sobre-texto,
+    .sobre-habilidades {
+        text-align: center;
+    }
+
+    .sobre-habilidades h3 {
+        margin-top: 0;
+    }
+}

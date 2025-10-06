@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --cor-fundo: #10101a;
+  --cor-surface: rgba(255, 255, 255, 0.05);
+  --cor-borda: rgba(255, 255, 255, 0.1);
+
+  /* Cores da Aura (Gradiente) */
+  --cor-glow-1: #7c3aed; 
+  --cor-glow-2: #ec4899; 
+  --cor-glow-3: #3b82f6; 
+
+  /* Tipografia */
+  --cor-texto-principal: #f8fafc;
+  --cor-texto-secundario: #cbd5e1;
+  --fonte-principal: 'Inter', sans-serif;
+}
+
+/* Reset e Estilos Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-secundario);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--cor-texto-principal);
+  font-weight: 700;
+}
+
+#cursor-glow {
+    position: fixed;
+    left: var(--x, 50%);
+    top: var(--y, 50%);
+    transform: translate(-50%, -50%);
+
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle at center,
+        var(--cor-glow-1) 0%,
+        var(--cor-glow-2) 40%,
+        var(--cor-glow-3) 80%,
+        transparent 100%
+    );
+    opacity: 0.15;
+    filter: blur(100px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Scrollbar com o novo tema */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--cor-fundo); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }

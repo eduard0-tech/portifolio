@@ -85,5 +85,3 @@ meu-portfolio/
 -   **Email**: [luiseduardocbft@gmail.com](mailto:luiseduardocbft@gmail.com)
 -   **LinkedIn**: [linkedin.com/in/luis-eduardo-teofilo-castelo-branco](https://www.linkedin.com/in/Luis-Eduardo-Teófilo-Castelo-Branco/)
 -   **GitHub**: [@eduard0-tech](https://github.com/eduard0-tech)
-
----

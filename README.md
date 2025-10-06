@@ -1,6 +1,6 @@
 # Portfólio Pessoal - Luis Eduardo
 
-# Preview do Portfólio: <img width="1919" height="1079" alt="Captura de tela 2025-10-05 213227" src="https://github.com/user-attachments/assets/92d4a228-a111-46a2-b27e-678cee315f17" /> 
+## Preview do Portfólio: <img width="1919" height="1079" alt="Captura de tela 2025-10-05 213227" src="https://github.com/user-attachments/assets/92d4a228-a111-46a2-b27e-678cee315f17" /> 
 
 > Portfólio pessoal de Luis Eduardo, Desenvolvedor Full-Stack, criado para apresentar minhas habilidades, projetos e trajetória profissional. Este projeto foi construído do zero com React e estilizado com CSS puro, focando em um design moderno, interativo e totalmente responsivo.
 
@@ -80,7 +80,7 @@ meu-portfolio/
 
 ## 📬 Contato
 
-**Luis Eduardo Teófilo Castelo Branco**
+**Luis Eduardo Teófilo Castelo Branco Ferreira**
 
 -   **Email**: [luiseduardocbft@gmail.com](mailto:luiseduardocbft@gmail.com)
 -   **LinkedIn**: [linkedin.com/in/luis-eduardo-teofilo-castelo-branco](https://www.linkedin.com/in/Luis-Eduardo-Teófilo-Castelo-Branco/)

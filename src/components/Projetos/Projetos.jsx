@@ -6,6 +6,7 @@ import { SiMongodb, SiTypescript, SiMysql, SiExpress, SiPrisma, SiJest, SiCypres
 import { TbApi } from "react-icons/tb";
 import projeto1Img from '../../assets/projeto1.png';
 import projeto2Img from '../../assets/projeto2.png';
+import projeto3Img from '../../assets/projeto3.png';
 
 const habilidades = [
     { nome: 'HTML5', icone: <FaHtml5 />, cor: '#E34F26' },
@@ -17,16 +18,16 @@ const habilidades = [
     { nome: 'TypeScript', icone: <SiTypescript />, cor: '#3178C6' },
     { nome: 'Java', icone: <FaJava />, cor: '#007396' },
     { nome: 'React', icone: <FaReact />, cor: '#61DAFB' },
-    { nome: 'Next.js', icone: <SiNextdotjs />, cor: '#000000' }, 
+    { nome: 'Next.js', icone: <SiNextdotjs />, cor: '#000000' },
     { nome: 'Node.js', icone: <FaNodeJs />, cor: '#339933' },
-    { nome: 'Express', icone: <SiExpress />, cor: '#000000' }, 
+    { nome: 'Express', icone: <SiExpress />, cor: '#000000' },
     { nome: 'Prisma', icone: <SiPrisma />, cor: '#2D3748' },
-    { nome: 'shadcn/ui', icone: <SiShadcnui />, cor: '#000000' }, 
+    { nome: 'shadcn/ui', icone: <SiShadcnui />, cor: '#000000' },
     { nome: 'MySQL', icone: <SiMysql />, cor: '#4479A1' },
     { nome: 'PostgreSQL', icone: <SiPostgresql />, cor: '#336791' },
     { nome: 'MongoDB', icone: <SiMongodb />, cor: '#47A248' },
     { nome: 'Jest', icone: <SiJest />, cor: '#C21325' },
-    { nome: 'Cypress', icone: <SiCypress />, cor: '#17202C' }, 
+    { nome: 'Cypress', icone: <SiCypress />, cor: '#17202C' },
     { nome: 'Git', icone: <FaGitAlt />, cor: '#F05032' },
     { nome: 'API REST', icone: <TbApi />, cor: '#495057' },
 ];
@@ -47,6 +48,14 @@ const projetos = [
         tecnologias: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'shadcn/ui'],
         link: 'https://pet-shop-faxn.vercel.app',
         repo: 'https://github.com/eduard0-tech/pet-shop',
+    },
+    {
+        titulo: 'Referreal System',
+        descricao: 'Desenvolvi esta SPA (Single Page Application) completa com React e CSS puro no front-end e uma API REST com Node.js/Express e MongoDB no back-end. A solução implementa um sistema de indicação de usuários, foi validada com testes E2E no Cypress e hospedada na nuvem, demonstrando o ciclo de desenvolvimento completo.',
+        imagem: projeto3Img,
+        tecnologias: ['JavaScript', 'React', 'Node.js', 'Express', 'MongoDB', 'Cypress'],
+        link: 'https://sistema-de-indicacao-front-end.onrender.com',
+        repo: 'https://github.com/eduard0-tech/Referral-System.git'
     },
 ];
 

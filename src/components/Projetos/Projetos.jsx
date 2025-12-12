@@ -1,8 +1,8 @@
 import React from 'react';
 import './Projetos.css';
 import { useInView } from 'react-intersection-observer';
-import { FaGithub, FaLink, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt, FaJava, FaBootstrap } from 'react-icons/fa';
-import { SiMongodb, SiTypescript, SiMysql, SiExpress, SiPrisma, SiJest, SiCypress, SiTailwindcss, SiPostgresql, SiSass, SiNextdotjs, SiShadcnui } from "react-icons/si";
+import { FaGithub, FaLink, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt, FaJava, FaBootstrap, FaRobot } from 'react-icons/fa';
+import { SiMongodb, SiTypescript, SiMysql, SiExpress, SiPrisma, SiJest, SiCypress, SiTailwindcss, SiPostgresql, SiSass, SiNextdotjs } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import projeto1Img from '../../assets/projeto1.png';
 import projeto2Img from '../../assets/projeto2.png';
@@ -22,7 +22,6 @@ const habilidades = [
     { nome: 'Node.js', icone: <FaNodeJs />, cor: '#339933' },
     { nome: 'Express', icone: <SiExpress />, cor: '#000000' },
     { nome: 'Prisma', icone: <SiPrisma />, cor: '#2D3748' },
-    { nome: 'shadcn/ui', icone: <SiShadcnui />, cor: '#000000' },
     { nome: 'MySQL', icone: <SiMysql />, cor: '#4479A1' },
     { nome: 'PostgreSQL', icone: <SiPostgresql />, cor: '#336791' },
     { nome: 'MongoDB', icone: <SiMongodb />, cor: '#47A248' },
@@ -81,7 +80,7 @@ const Projetos = () => {
                                 {projeto.tecnologias.map((techNome, i) => {
                                     const habilidade = habilidades.find(h => h.nome === techNome);
                                     if (!habilidade) return null;
-                                    const corFinal = ['#000000', '#2D3748', '#17202C'].includes(habilidade.cor)
+                                    const corFinal = ['#000000', '#2D3748', '#17202C', '#555555'].includes(habilidade.cor)
                                         ? 'var(--cor-texto-claro)'
                                         : habilidade.cor;
                                     return (

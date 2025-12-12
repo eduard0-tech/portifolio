@@ -27,7 +27,7 @@ const Hero = () => {
                         <a href="#projetos" className="btn btn-primary">
                             Ver Projetos
                         </a>
-                        <a href="/Luis_Eduardo_CV.pdf" download="Luis_Eduardo_CV.pdf" className="btn btn-secondary">
+                        <a href="/Luis_Eduardo_Teofilo_Castelo_CV.pdf" download="Luis_Eduardo_Teofilo_Castelo_CV.pdf" className="btn btn-secondary">
                             Download CV
                         </a>
                     </div>

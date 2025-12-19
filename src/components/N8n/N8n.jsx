@@ -1,8 +1,15 @@
 import './N8n.css';
 import { useInView } from 'react-intersection-observer';
-import { SiN8N, SiJavascript, SiMysql } from 'react-icons/si';
-import { RiRobotLine } from 'react-icons/ri';
+import { SiN8N } from 'react-icons/si';
+import {
+    FiZap,
+    FiRefreshCw,
+    FiActivity,
+    FiShield,
+    FiLayers
+} from 'react-icons/fi';
 
+import { SiDocker } from 'react-icons/si';
 const N8n = () => {
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
@@ -30,7 +37,11 @@ const N8n = () => {
 
                     <div className="n8n-grid">
                         <div className="n8n-card">
-                            <h4>🚀 Pipeline de Leads em Tempo Real</h4>
+                            <h4 className="n8n-card-title">
+                                <FiZap className="icon-leads" />
+                                Pipeline de Leads em Tempo Real
+                            </h4>
+
                             <p>
                                 Webhooks para captura de leads, validação e normalização de dados,
                                 enriquecimento via APIs externas e persistência em CRMs.
@@ -39,7 +50,11 @@ const N8n = () => {
                         </div>
 
                         <div className="n8n-card">
-                            <h4>🔄 Sincronização Incremental de Dados</h4>
+                            <h4 className="n8n-card-title">
+                                <FiRefreshCw className="icon-sync" />
+                                Sincronização Incremental de Dados
+                            </h4>
+
                             <p>
                                 Sincronização contínua entre Postgres, MySQL e ferramentas como
                                 Google Sheets e Airtable. Uso de marcadores incrementais para
@@ -48,7 +63,11 @@ const N8n = () => {
                         </div>
 
                         <div className="n8n-card">
-                            <h4>📡 Monitoramento e Observabilidade</h4>
+                            <h4 className="n8n-card-title">
+                                <FiActivity className="icon-monitor" />
+                                Monitoramento e Observabilidade
+                            </h4>
+
                             <p>
                                 Health checks automatizados, agregação de métricas por workflow,
                                 alertas inteligentes e notificações via Slack ou Email
@@ -57,7 +76,11 @@ const N8n = () => {
                         </div>
 
                         <div className="n8n-card">
-                            <h4>🔐 Segurança e Gestão de Credenciais</h4>
+                            <h4 className="n8n-card-title">
+                                <FiShield className="icon-security" />
+                                Segurança e Gestão de Credenciais
+                            </h4>
+
                             <p>
                                 Configuração segura de OAuth2 e API Keys, segregação de ambientes
                                 (dev/prod) e controle de acesso para garantir segurança
@@ -66,7 +89,11 @@ const N8n = () => {
                         </div>
 
                         <div className="n8n-card">
-                            <h4>🧩 Padrões de Engenharia de Workflows</h4>
+                            <h4 className="n8n-card-title">
+                                <FiLayers className="icon-patterns" />
+                                Padrões de Engenharia de Workflows
+                            </h4>
+
                             <p>
                                 Uso intensivo de Webhook, HTTP Request, Function (JavaScript),
                                 IF, SplitInBatches e nodes SQL. Aplicação de padrões de retry,
@@ -75,7 +102,11 @@ const N8n = () => {
                         </div>
 
                         <div className="n8n-card">
-                            <h4>🚢 Deploy e Operação</h4>
+                            <h4 className="n8n-card-title">
+                                <SiDocker className="icon-deploy" />
+                                Deploy e Operação
+                            </h4>
+
                             <p>
                                 Deploy de automações em n8n Cloud ou ambientes self-hosted
                                 (Docker), testes locais, validação em staging e documentação
@@ -83,6 +114,7 @@ const N8n = () => {
                             </p>
                         </div>
                     </div>
+
 
                     <div className="n8n-tags">
                         <span className="tag">Automação</span>

@@ -28,11 +28,9 @@
 
 /* CARD PRINCIPAL */
 .n8n-content {
-    background: linear-gradient(
-        145deg,
-        rgba(255, 255, 255, 0.04),
-        rgba(255, 255, 255, 0.01)
-    );
+    background: linear-gradient(145deg,
+            rgba(255, 255, 255, 0.04),
+            rgba(255, 255, 255, 0.01));
     border: 1px solid var(--cor-borda);
     backdrop-filter: blur(8px);
     border-radius: 20px;
@@ -55,6 +53,37 @@
     margin-bottom: 28px;
 }
 
+/* CORES INICIAIS DOS ICONES */
+.icon-leads {
+    color: #a78bfa;
+}
+
+.icon-sync {
+    color: #60a5fa;
+}
+
+.icon-monitor {
+    color: #34d399;
+}
+
+.icon-security {
+    color: #fbbf24;
+}
+
+.icon-patterns {
+    color: #818cf8;
+}
+
+.icon-deploy {
+    color: #38bdf8;
+}
+
+.n8n-card:hover .n8n-card-title svg {
+    color: #EA4B71;
+    transform: scale(1.1);
+}
+
+
 /* CARDS INTERNOS */
 .n8n-card {
     background: var(--cor-surface);
@@ -62,6 +91,19 @@
     border-radius: 16px;
     padding: 20px;
     transition: all 0.3s ease;
+}
+
+.n8n-card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.05rem;
+    color: #d1d5db;
+}
+
+.n8n-card-title svg {
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .n8n-card h4 {
@@ -79,6 +121,19 @@
 .n8n-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.n8n-card:hover .n8n-card-title svg {
+    color: #EA4B71;
+    transform: scale(1.1);
+}
+
+.n8n-card:hover .n8n-card-title {
+    color: #fff;
+}
+
+.n8n-card-title .docker-icon {
+    color: #38bdf8;
 }
 
 /* TAGS */

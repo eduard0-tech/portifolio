@@ -1,7 +1,7 @@
 import './Sobre.css';
 import { useInView } from 'react-intersection-observer';
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaJava, FaGitAlt } from 'react-icons/fa';
-import { 
+import {
     SiSass, SiTailwindcss, SiBootstrap, SiJavascript, SiTypescript,
     SiExpress, SiPrisma, SiMysql, SiPostgresql, SiMongodb, SiJest,
     SiCypress, SiFastapi, SiSupabase, SiN8N
@@ -54,7 +54,7 @@ const Sobre = () => {
     return (
         <section id="sobre" className={`sobre ${inView ? 'visible' : ''}`} ref={ref}>
             <div className="sobre-container">
-                
+
                 <div className="sobre-texto">
                     <h2>Sobre Mim</h2>
                     <p>
@@ -67,16 +67,18 @@ const Sobre = () => {
                     </p>
                 </div>
 
+
+
                 <div className="sobre-habilidades">
                     <h3>Minhas Habilidades</h3>
                     <div className="habilidades-grid">
                         {habilidades.map((habilidade, index) => (
-                            <div 
+                            <div
                                 className="habilidade-card"
                                 key={index}
                                 style={{ borderColor: habilidade.cor }}
                             >
-                                <div 
+                                <div
                                     className="habilidade-icone"
                                     style={{ color: habilidade.cor }}
                                 >

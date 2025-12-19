@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Sobre from './components/Sobre/Sobre';
+import N8n from './components/N8n/N8n';
 import Projetos from './components/Projetos/Projetos';
 import Contato from './components/Contato/Contato';
 import CursorGlow from './components/CursorGlow/CursorGlow';
@@ -9,12 +10,13 @@ import CursorGlow from './components/CursorGlow/CursorGlow';
 function App() {
   return (
     <>
-    <CursorGlow />
+      <CursorGlow />
       <Navbar />
       <main>
         <Hero />
         <Sobre />
-        <Projetos />  
+        <N8n />
+        <Projetos />
         <Contato />
       </main>
     </>

@@ -1,0 +1,118 @@
+.n8n {
+    padding: 100px 5%;
+    position: relative;
+}
+
+.n8n-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.n8n-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.n8n-icon {
+    font-size: 3rem;
+    color: #EA4B71;
+    filter: drop-shadow(0 0 12px rgba(234, 75, 113, 0.4));
+}
+
+.n8n h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+/* CARD PRINCIPAL */
+.n8n-content {
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.04),
+        rgba(255, 255, 255, 0.01)
+    );
+    border: 1px solid var(--cor-borda);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 32px;
+}
+
+/* DESCRIÇÃO */
+.n8n-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    opacity: 0.9;
+    margin-bottom: 28px;
+}
+
+/* GRID DOS FLUXOS */
+.n8n-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+/* CARDS INTERNOS */
+.n8n-card {
+    background: var(--cor-surface);
+    border: 1px solid var(--cor-borda);
+    border-radius: 16px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.n8n-card h4 {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+    color: #EA4B71;
+}
+
+.n8n-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.n8n-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* TAGS */
+.n8n-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    background: rgba(234, 75, 113, 0.12);
+    color: #EA4B71;
+    border: 1px solid rgba(234, 75, 113, 0.4);
+    transition: all 0.25s ease;
+}
+
+.tag:hover {
+    background: #EA4B71;
+    color: #fff;
+}
+
+/* ANIMAÇÃO */
+.n8n,
+.n8n-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.n8n.visible,
+.n8n.visible .n8n-content {
+    opacity: 1;
+    transform: translateY(0);
+}

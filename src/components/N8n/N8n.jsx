@@ -115,7 +115,6 @@ const N8n = () => {
                         </div>
                     </div>
 
-
                     <div className="n8n-tags">
                         <span className="tag">Automação</span>
                         <span className="tag">n8n</span>

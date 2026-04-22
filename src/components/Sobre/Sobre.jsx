@@ -13,20 +13,16 @@ const habilidades = [
     { nome: 'HTML5', icone: <FaHtml5 />, cor: '#E34F26' },
     { nome: 'CSS3', icone: <FaCss3Alt />, cor: '#1572B6' },
     { nome: 'SASS', icone: <SiSass />, cor: '#CC6699' },
-    { nome: 'Tailwind CSS', icone: <SiTailwindcss />, cor: '#06B6D4' },
     { nome: 'Bootstrap', icone: <SiBootstrap />, cor: '#7952B3' },
 
     { nome: 'JavaScript', icone: <SiJavascript />, cor: '#F7DF1E' },
-    { nome: 'TypeScript', icone: <SiTypescript />, cor: '#3178C6' },
     { nome: 'Java', icone: <FaJava />, cor: '#007396' },
 
     { nome: 'React', icone: <FaReact />, cor: '#61DAFB' },
-    { nome: 'Next.js', icone: <TbBrandNextjs />, cor: '#000000' },
 
     { nome: 'Node.js', icone: <FaNodeJs />, cor: '#339933' },
     { nome: 'Express', icone: <SiExpress />, cor: '#000000' },
     { nome: 'Prisma', icone: <SiPrisma />, cor: '#2D3748' },
-    { nome: 'FastAPI', icone: <SiFastapi />, cor: '#009688' },
 
     { nome: 'MySQL', icone: <SiMysql />, cor: '#4479A1' },
     { nome: 'PostgreSQL', icone: <SiPostgresql />, cor: '#336791' },

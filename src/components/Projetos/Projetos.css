@@ -17,30 +17,6 @@
 }
 
 .projeto-card {
-    opacity: 0;
-    transform: translateY(30px) scale(0.98);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
-    transition-delay: var(--delay, 0s);
-}
-
-.projetos-grid.visible .projeto-card {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-.projetos-grid.visible .projeto-card:nth-child(1) {
-    transition-delay: 100ms;
-}
-
-.projetos-grid.visible .projeto-card:nth-child(2) {
-    transition-delay: 200ms;
-}
-
-.projetos-grid.visible .projeto-card:nth-child(3) {
-    transition-delay: 300ms;
-}
-
-.projeto-card {
     background: var(--cor-surface);
     border: 1px solid var(--cor-borda);
     backdrop-filter: blur(10px);

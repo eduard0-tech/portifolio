@@ -1,4 +1,5 @@
 import './Sobre.css';
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaJava, FaGitAlt } from 'react-icons/fa';
 import {
@@ -47,32 +48,90 @@ const Sobre = () => {
         threshold: 0.1,
     });
 
-    return (
-        <section id="sobre" className={`sobre ${inView ? 'visible' : ''}`} ref={ref}>
-            <div className="sobre-container">
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.1,
+            },
+        },
+    };
 
-                <div className="sobre-texto">
-                    <h2>Sobre Mim</h2>
-                    <p>
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.6,
+                ease: 'easeOut',
+            },
+        },
+    };
+
+    const cardVariants = {
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: 0.5,
+                ease: 'easeOut',
+            },
+        },
+        hover: {
+            scale: 1.1,
+            transition: {
+                duration: 0.3,
+            },
+        },
+    };
+
+    return (
+        <section id="sobre" className="sobre" ref={ref}>
+            <motion.div
+                className="sobre-container"
+                variants={containerVariants}
+                initial="hidden"
+                animate={inView ? 'visible' : 'hidden'}
+            >
+                <motion.div className="sobre-texto" variants={itemVariants}>
+                    <motion.h2 variants={itemVariants}>Sobre Mim</motion.h2>
+                    <motion.p variants={itemVariants}>
                         Atualmente cursando Análise e Desenvolvimento de Sistemas na UNIFOR, minha jornada na tecnologia é marcada pela proatividade e pela busca constante por conhecimento.
                         Tive a oportunidade de ser monitor da disciplina de Raciocínio Lógico, aprimorando minha didática e minha capacidade de resolver problemas de forma estruturada.
-                    </p>
-                    <p>
+                    </motion.p>
+                    <motion.p variants={itemVariants}>
                         Concluí uma formação intensiva em Desenvolvimento Full-Stack pela Digital College, onde desenvolvi projetos completos utilizando tecnologias modernas do mercado.
-                        Hoje, foco em criar soluções eficientes, escaláveis e que proporcionam uma ótima experiência ao usuário.
-                    </p>
-                </div>
+                        Hoje, foco em criar soluções eficientes, escaláveis e que proporcionem uma ótima experiência ao usuário.
+                    </motion.p>
+                </motion.div>
 
-
-
-                <div className="sobre-habilidades">
-                    <h3>Minhas Habilidades</h3>
-                    <div className="habilidades-grid">
+                <motion.div className="sobre-habilidades" variants={itemVariants}>
+                    <motion.h3 variants={itemVariants}>Minhas Habilidades</motion.h3>
+                    <motion.div
+                        className="habilidades-grid"
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: {
+                                opacity: 1,
+                                transition: {
+                                    staggerChildren: 0.05,
+                                },
+                            },
+                        }}
+                        initial="hidden"
+                        animate={inView ? 'visible' : 'hidden'}
+                    >
                         {habilidades.map((habilidade, index) => (
-                            <div
+                            <motion.div
                                 className="habilidade-card"
                                 key={index}
                                 style={{ borderColor: habilidade.cor }}
+                                variants={cardVariants}
+                                whileHover="hover"
                             >
                                 <div
                                     className="habilidade-icone"
@@ -81,12 +140,12 @@ const Sobre = () => {
                                     {habilidade.icone}
                                 </div>
                                 <p>{habilidade.nome}</p>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
 
-            </div>
+            </motion.div>
         </section>
     );
 };

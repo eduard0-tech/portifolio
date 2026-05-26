@@ -157,17 +157,3 @@
     background: #EA4B71;
     color: #fff;
 }
-
-/* ANIMAÇÃO */
-.n8n,
-.n8n-content {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.n8n.visible,
-.n8n.visible .n8n-content {
-    opacity: 1;
-    transform: translateY(0);
-}

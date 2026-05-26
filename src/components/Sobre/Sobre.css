@@ -71,19 +71,6 @@
     word-break: break-word;
 }
 
-.sobre .sobre-texto,
-.sobre .sobre-habilidades {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.sobre.visible .sobre-texto,
-.sobre.visible .sobre-habilidades {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 @media (max-width: 992px) {
     .sobre-container {
         grid-template-columns: 1fr;

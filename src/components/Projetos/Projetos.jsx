@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Projetos.css';
 import { useInView } from 'react-intersection-observer';
 import { FaGithub, FaLink, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt, FaJava, FaBootstrap, FaRobot } from 'react-icons/fa';
@@ -61,18 +62,115 @@ const Projetos = () => {
         threshold: 0.1,
     });
 
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.2,
+            },
+        },
+    };
+
+    const cardVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.6,
+                ease: 'easeOut',
+            },
+        },
+        hover: {
+            y: -10,
+            boxShadow: '0 20px 40px rgba(0, 212, 255, 0.3)',
+            transition: {
+                duration: 0.3,
+            },
+        },
+    };
+
+    const titleVariants = {
+        hidden: { opacity: 0, y: -20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.6,
+                ease: 'easeOut',
+            },
+        },
+    };
+
+    const linkVariants = {
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: 0.4,
+            },
+        },
+        hover: {
+            scale: 1.1,
+            color: '#00d4ff',
+            transition: {
+                duration: 0.2,
+            },
+        },
+    };
+
     return (
         <section id="projetos" className="projetos" ref={ref}>
-            <h2 className="projetos-titulo">Meus Projetos</h2>
-            <div className={`projetos-grid ${inView ? 'visible' : ''}`}>
+            <motion.h2
+                className="projetos-titulo"
+                variants={titleVariants}
+                initial="hidden"
+                animate={inView ? 'visible' : 'hidden'}
+            >
+                Meus Projetos
+            </motion.h2>
+            <motion.div
+                className="projetos-grid"
+                variants={containerVariants}
+                initial="hidden"
+                animate={inView ? 'visible' : 'hidden'}
+            >
                 {projetos.map((projeto, index) => (
-                    <div className="projeto-card" key={index}>
+                    <motion.div
+                        className="projeto-card"
+                        key={index}
+                        variants={cardVariants}
+                        whileHover="hover"
+                    >
                         <div className="projeto-imagem-container">
-                            <img src={projeto.imagem} alt={projeto.titulo} className="projeto-imagem" />
+                            <motion.img
+                                src={projeto.imagem}
+                                alt={projeto.titulo}
+                                className="projeto-imagem"
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ duration: 0.3 }}
+                            />
                         </div>
                         <div className="projeto-conteudo">
-                            <h3 className="projeto-titulo-card">{projeto.titulo}</h3>
-                            <p className="projeto-descricao">{projeto.descricao}</p>
+                            <motion.h3
+                                className="projeto-titulo-card"
+                                initial={{ opacity: 0 }}
+                                animate={inView ? { opacity: 1 } : { opacity: 0 }}
+                                transition={{ delay: 0.2 }}
+                            >
+                                {projeto.titulo}
+                            </motion.h3>
+                            <motion.p
+                                className="projeto-descricao"
+                                initial={{ opacity: 0 }}
+                                animate={inView ? { opacity: 1 } : { opacity: 0 }}
+                                transition={{ delay: 0.3 }}
+                            >
+                                {projeto.descricao}
+                            </motion.p>
                             <div className="projeto-tecnologias">
                                 {projeto.tecnologias.map((techNome, i) => {
                                     const habilidade = habilidades.find(h => h.nome === techNome);
@@ -81,29 +179,53 @@ const Projetos = () => {
                                         ? 'var(--cor-texto-claro)'
                                         : habilidade.cor;
                                     return (
-                                        <div
+                                        <motion.div
                                             key={i}
                                             className="tech-tag"
                                             style={{ '--tech-cor': corFinal }}
+                                            variants={linkVariants}
+                                            initial="hidden"
+                                            animate={inView ? 'visible' : 'hidden'}
+                                            transition={{ delay: 0.4 + i * 0.05 }}
+                                            whileHover="hover"
                                         >
                                             {habilidade.icone}
                                             <span>{habilidade.nome}</span>
-                                        </div>
+                                        </motion.div>
                                     );
                                 })}
                             </div>
-                            <div className="projeto-links">
-                                <a href={projeto.link} target="_blank" rel="noopener noreferrer" className="projeto-link">
+                            <motion.div className="projeto-links">
+                                <motion.a
+                                    href={projeto.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="projeto-link"
+                                    variants={linkVariants}
+                                    initial="hidden"
+                                    animate={inView ? 'visible' : 'hidden'}
+                                    whileHover="hover"
+                                >
                                     <FaLink /> <span>Ver Site</span>
-                                </a>
-                                <a href={projeto.repo} target="_blank" rel="noopener noreferrer" className="projeto-link">
+                                </motion.a>
+                                <motion.a
+                                    href={projeto.repo}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="projeto-link"
+                                    variants={linkVariants}
+                                    initial="hidden"
+                                    animate={inView ? 'visible' : 'hidden'}
+                                    transition={{ delay: 0.1 }}
+                                    whileHover="hover"
+                                >
                                     <FaGithub /> <span>GitHub</span>
-                                </a>
-                            </div>
+                                </motion.a>
+                            </motion.div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </section>
     );
 };
